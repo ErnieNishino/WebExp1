@@ -1,0 +1,52 @@
+.special {
+    color: rgb(222, 12, 61);
+    font-weight: bold;
+}
+
+ul.good {
+    list-style-type: "\1F44D";
+}
+
+li em {
+    color: antiquewhite;
+}
+
+body h1+p.special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
+
+a:link {
+    color: pink;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.outer {
+    border: 5px solid black;
+}
+
+.box1 {
+    padding: 10px;
+    width: calc(90% - 30px);
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.box2 {
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    transform: rotate(0.8turn);
+    color: aliceblue;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+}
