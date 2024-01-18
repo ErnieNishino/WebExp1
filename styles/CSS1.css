@@ -50,3 +50,14 @@ a:hover {
     color: aliceblue;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
 }
+
+body {
+    background-color: pink;
+}
+
+/* 如果浏览器的视口宽于 30em，接下来的媒体查询则定义了蓝色背景 */
+@media (min-width: 30em) {
+    body {
+        background-color: white;
+    }
+}
