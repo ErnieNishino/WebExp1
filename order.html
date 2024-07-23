@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>订单确认</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // 弹出输入框并保存用户输入的信息
+    let price = parseFloat(prompt("请输入商品价格:"));
+    let num = parseInt(prompt("请输入商品数量:"));
+    let address = prompt("请输入收货地址:");
+
+    // 计算总价
+    let total = price * num;
+
+    // 生成订单确认表格并输出到网页
+    document.write(`
+        <table>
+            <thead>
+                <tr>
+                    <th>商品价格</th>
+                    <th>商品数量</th>
+                    <th>总价</th>
+                    <th>收货地址</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${price}元</td>
+                    <td>${num}</td>
+                    <td>${total}元</td>
+                    <td>${address}</td>
+                </tr>
+            </tbody>
+        </table>
+    `);
+</script>
+
+</body>
+</html>
