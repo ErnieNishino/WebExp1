@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>随机颜色生成</title>
+</head>
+<body>
+    <script>
+        function getRandomColor(flag) {
+            // 生成随机的RGB值
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+
+            // 如果参数为true或未提供参数，返回16进制颜色格式
+            if (flag === undefined || flag) {
+                // 转换成16进制并补齐两位数
+                const hexR = r.toString(16).padStart(2, '0');
+                const hexG = g.toString(16).padStart(2, '0');
+                const hexB = b.toString(16).padStart(2, '0');
+                return `#${hexR}${hexG}${hexB}`;
+            } 
+            // 如果参数为false，返回RGB颜色格式
+            else {
+                return `rgb(${r},${g},${b})`;
+            }
+        }
+
+        // console.log(getRandomColor(true));  // 输出一个随机16进制颜色
+        // console.log(getRandomColor(false)); // 输出一个随机RGB颜色
+        // console.log(getRandomColor());      // 输出一个随机16进制颜色（默认情况）
+        document.write(getRandomColor(true));  // 输出一个随机16进制颜色
+        document.write(getRandomColor(false)); // 输出一个随机RGB颜色
+        document.write(getRandomColor());      // 输出一个随机16进制颜色（默认情况）
+    </script>
+</body>
+</html>

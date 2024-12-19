@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学生信息</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>学生信息</h2>
+<table>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>家乡</th>
+        </tr>
+    </thead>
+    <tbody id="student-table-body">
+    </tbody>
+</table>
+
+<script>
+    // 存储学生信息的数组对象
+    const students = [
+        {name: "小明", age: 18, gender: "男", hometown: "河北省"},
+        {name: "小红", age: 19, gender: "女", hometown: "河南省"},
+        {name: "小刚", age: 17, gender: "男", hometown: "山西省"},
+        {name: "小丽", age: 18, gender: "女", hometown: "山东省"}
+    ];
+
+    // 获取表格的tbody元素
+    const tbody = document.getElementById('student-table-body');
+
+    // 遍历数组对象并生成表格行
+    students.forEach((student, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${student.name}</td>
+            <td>${student.age}</td>
+            <td>${student.gender}</td>
+            <td>${student.hometown}</td>
+        `;
+        tbody.appendChild(row);
+    });
+</script>
+
+</body>
+</html>
